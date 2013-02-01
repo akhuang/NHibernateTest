@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B3714C8-31A3-4DE4-9CC3-0802F45F6216}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NHibernateTest</RootNamespace>
+    <AssemblyName>NHibernateTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL" />
+    <Reference Include="NHibernate, Version=3.3.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>ThirdPart\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapping\AutoMapConfiguration.cs" />
+    <Compile Include="AutoMapping\Conventions\ClassNameConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\CollectionConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\ComponentConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\EnumConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\HasManyConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\HasManyToManyConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\HasOneToOneConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\JoinConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\JoinedSubclassConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\PrimaryKeyConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\PropertyConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\ReferenceConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\StringExtensions.cs" />
+    <Compile Include="AutoMapping\Conventions\SubclassConvention.cs" />
+    <Compile Include="AutoMapping\Conventions\SubClassNameConvention.cs" />
+    <Compile Include="AutoMapping\OverrideMapping.cs" />
+    <Compile Include="AutoMapping\PersistenceModelGenerator.cs" />
+    <Compile Include="BaseTest.cs" />
+    <Compile Include="Entitys\Class.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Classroom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Course.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\DoorKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Education.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Employee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\EmpRole.cs" />
+    <Compile Include="Entitys\Gender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Lab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Monetary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\NullableTest.cs" />
+    <Compile Include="Entitys\OfficeUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Place.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Student.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\SubclassTest.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Entitys\Teacher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\Test.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitys\EmpUser.cs" />
+    <Compile Include="Entitys\TestDelete.cs" />
+    <Compile Include="FluentMapping\ClassesMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentMapping\CourseMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentMapping\StudentMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IPermanent.cs" />
+    <Compile Include="IsDeletedFilter.cs" />
+    <Compile Include="MyDeleteEventListener.cs" />
+    <Compile Include="NHibernateHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\CascadeOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\DeleteTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\GenerateTables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\InheritanceTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\InsertTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\InverseTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ItemsMergeTest.cs" />
+    <Compile Include="Tests\LockTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\NullableTest.cs" />
+    <Compile Include="Tests\OneSideM2MTest.cs" />
+    <Compile Include="Tests\QueryTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\RelationshipTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\SubclassTest.cs" />
+    <Compile Include="Tests\TransactionOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\VersionTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NHibernate.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestDB.db3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FluentNHibernate\FluentNHibernate.csproj">
+      <Project>{529145D5-6CC3-4016-89B5-826563024AF1}</Project>
+      <Name>FluentNHibernate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
